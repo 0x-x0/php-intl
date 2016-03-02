@@ -12,7 +12,7 @@ before_script:
   - pwd
   - cd /tmp/pickle
   - bin/pickle install intl
-  - cd /
+  - cd /root/src/github.com/php-intl
   - chmod +x test.php
 
 script:
