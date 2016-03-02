@@ -11,6 +11,7 @@ before_script:
   - mkdir -p shippable/codecoverage
   - cd /tmp/pickle
   - bin/pickle install intl
+  - pwd
   - chmod +x test.php
 
 script:
