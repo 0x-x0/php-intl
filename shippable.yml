@@ -6,7 +6,7 @@ php:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - /tmp/picklebin/pickle install intl
+  - /tmp/pickle/bin/pickle install intl
   - ls /root/.phpenv/versions/5.6/lib/php/extensions/no-debug-non-zts-20131226/
   - echo "extension=intl.so" >> /root/.phpenv/versions/5.6/etc/php.ini
 
