@@ -9,9 +9,10 @@ php:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - pwd
   - cd /tmp/pickle
   - bin/pickle install intl
-  - pwd
+  - cd /
   - chmod +x test.php
 
 script:
