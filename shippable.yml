@@ -11,6 +11,7 @@ before_script:
   - mkdir -p shippable/codecoverage
   - cd /tmp/pickle
   - bin/pickle install intl
+  - chmod +x test.php
 
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage test.php
