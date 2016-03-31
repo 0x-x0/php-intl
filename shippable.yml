@@ -1,10 +1,12 @@
 build_image: chetantarale/u14php7:tip
 
-language:php
+language: php
 
-php:
+php: 
+  - 5.4
   - 5.5
   - 5.6
+  - '7.0'
 
 before_script:
   - mkdir -p shippable/testresults
