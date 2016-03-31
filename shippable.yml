@@ -1,7 +1,6 @@
-build_image:chetantarale/u14php7:tip
+build_image: chetantarale/u14php7:tip
 
-language:
-  - php
+language:php
 
 php:
   - 5.5
