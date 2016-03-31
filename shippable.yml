@@ -1,3 +1,5 @@
+build_image:chetantarale/u14php7:tip
+
 language: php
 
 php:
