@@ -1,4 +1,4 @@
-build_image: chetantarale/u14php7pls:testext
+build_image: drydock/u14php7pls:tip
 
 language: php
 
