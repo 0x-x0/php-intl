@@ -6,7 +6,7 @@ php:
 build:
  cache: true
  cache_dir_list:
-    -  $HOME/.phpenv/versions/$versionName/lib/php/extensions/$dirToCache
+    -  $HOME/.phpenv/versions/5.5/lib/php/extensions/$dirToCache
     #- $SHIPPABLE_BUILD_DIR/node_modules
 
  ci:
