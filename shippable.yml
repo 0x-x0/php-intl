@@ -6,7 +6,7 @@ php:
 build:
  cache: true
  cache_dir_list:
-    -  $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/$dirToCache
+    -  $HOME/.phpenv/versions/$versionName/lib/php/extensions/$dirToCache
     #- $SHIPPABLE_BUILD_DIR/node_modules
 
  ci:
@@ -18,3 +18,9 @@ build:
     - dirToCache=`ls $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ | grep no-debug`
     - echo $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/$dirToCache
     - ls $dirToCache
+    - echo "$(phpenv version-name)" >> $HOME/version.txt
+
+post_ci:
+    - phpv=`cat $HOME/version.txt`
+    - echo $phpv
+    - export versionName=$phpv
