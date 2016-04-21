@@ -18,10 +18,10 @@ build:
     - dirToCache=`ls $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ | grep no-debug`
     - echo $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/$dirToCache
     - echo "$(phpenv version-name)" >> $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/version.txt
-    - cat $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/version.txt
+    - cat $HOME/version.txt
 
  push:
-    - phpv=`cat $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/version.txt`
+    - phpv=`cat $HOME/version.txt`
     - echo $phpv
     - export versionName=$phpv
     - echo $?
