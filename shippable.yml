@@ -20,7 +20,7 @@ build:
     - echo "$(phpenv version-name)" >> $HOME/version.txt
     - cat $HOME/version.txt
 
- post_ci:
+ on_success:
     - phpv=`cat $HOME/version.txt`
     - echo $phpv
     - export versionName=$phpv
