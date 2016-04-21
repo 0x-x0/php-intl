@@ -20,7 +20,7 @@ build:
     - echo "$(phpenv version-name)" >> $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/version.txt
     - cat $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/version.txt
 
- on_success:
+ push:
     - phpv=`cat $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/version.txt`
     - echo $phpv
     - export versionName=$phpv
