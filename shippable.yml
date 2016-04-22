@@ -3,8 +3,10 @@ language: php
 php:
   - 5.5
 
+# environment variable
 env:
-` - dir=$dirToCache
+ - dir=$dirToCache
+ - FOO=bar BAR=foo
 
 build:
  cache: true
