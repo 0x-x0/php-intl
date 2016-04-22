@@ -19,6 +19,7 @@ build:
     - echo $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/$dirToCache
     - echo "$(phpenv version-name)" >> $HOME/version.txt
     - cat $HOME/version.txt
+    - echo $SHIPPABLE_PHP_VERSION
 
  post_ci:
     - phpv=`cat $HOME/version.txt`
