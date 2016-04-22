@@ -6,7 +6,7 @@ php:
 build:
  cache: true
  cache_dir_list:
-    -  /root/.phpenv/versions/$SHIPPABLE_PHP_VERSION/lib/php/extensions/no-debug-non-zts-20121212
+    -  /root/.phpenv/versions/$SHIPPABLE_V/lib/php/extensions/no-debug-non-zts-20121212
     #- $SHIPPABLE_BUILD_DIR/node_modules
 
  ci:
