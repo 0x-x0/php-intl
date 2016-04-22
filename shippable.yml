@@ -27,6 +27,8 @@ build:
     - echo $SHIPPABLE_PHP_VERSION
     - docker ps -a
     - echo "$dir"
+    - echo $foo
+    - echo $bar
 
  post_ci:
     - echo "$dir"
