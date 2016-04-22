@@ -3,10 +3,13 @@ language: php
 php:
   - 5.5
 
+env:
+`- dir=$dirToCache
+
 build:
  cache: true
  cache_dir_list:
-    -  /root/.phpenv/versions/$SHIPPABLE_V/lib/php/extensions/$dirToCache
+    -  /root/.phpenv/versions/$SHIPPABLE_V/lib/php/extensions/$dir
     #- $SHIPPABLE_BUILD_DIR/node_modules
 
  ci:
