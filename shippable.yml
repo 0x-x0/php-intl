@@ -2,16 +2,16 @@ language: php
 
 php:
   - 5.5
+  - 5.6
 
 # environment variable
 env:
- - dir=$dirToCache
- - FOO=bar BAR=foo
+ - FOO=bar
 
 build:
  cache: true
  cache_dir_list:
-    -  /root/.phpenv/versions/SHIPPABLE_LANG_VERSION/lib/php/extensions/
+    -  /root/.phpenv/versions/$SHIPPABLE_LANG_VERSION/lib/php/extensions/
     #- $SHIPPABLE_BUILD_DIR/node_modules
 
  ci:
