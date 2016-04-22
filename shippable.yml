@@ -26,8 +26,10 @@ build:
     - cat $HOME/version.txt
     - echo $SHIPPABLE_PHP_VERSION
     - docker ps -a
+    - echo "$dir"
 
  post_ci:
+    - echo "$dir"
     - phpv=`cat $HOME/version.txt`
     - echo $phpv
     - export versionName=$phpv
