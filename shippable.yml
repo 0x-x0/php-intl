@@ -4,7 +4,7 @@ php:
   - 5.5
 
 env:
-`- dir=$dirToCache
+` - dir=$dirToCache
 
 build:
  cache: true
