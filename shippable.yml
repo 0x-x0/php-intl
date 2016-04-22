@@ -20,10 +20,12 @@ build:
     - echo "$(phpenv version-name)" >> $HOME/version.txt
     - cat $HOME/version.txt
     - echo $SHIPPABLE_PHP_VERSION
+    - docker ps -a
 
  post_ci:
     - phpv=`cat $HOME/version.txt`
     - echo $phpv
     - export versionName=$phpv
     - echo $?
+    - docker ps -a
     
