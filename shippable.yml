@@ -29,4 +29,4 @@ build:
     # Debug after
     - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
     - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ -name intl.so | wc -l
-    
+    - echo "Hello World!!!"
