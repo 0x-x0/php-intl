@@ -18,7 +18,7 @@ build:
     - php -v
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
-    - pickle install intl
+    #- pickle install intl
     - echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
     - dirToCache=`ls $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ | grep no-debug`
     - echo $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/$dirToCache
