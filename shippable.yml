@@ -23,7 +23,7 @@ build:
     - >
       if [ $(find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ -name intl.so | wc -l) -eq 0 ]; then
         # Install PHP "intl" extension for \Collator class usage
-        pickle install --ansi intl
+        #pickle install --ansi intl
         echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
       fi;
     # Debug after
