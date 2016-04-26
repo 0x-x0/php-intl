@@ -10,7 +10,7 @@ env:
 build:
  cache: true
  cache_dir_list:
-    -  /root/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/$dirToCache
+    -  /root/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
 
  ci:
     - php -v
@@ -31,6 +31,5 @@ build:
     # Debug after
     - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
     - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ -name intl.so | wc -l
-    - echo "Hello World!!!"
     - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
     - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage test.php
