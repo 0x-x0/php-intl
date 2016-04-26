@@ -21,6 +21,7 @@ build:
     # Debug before
     - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
     - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ -name intl.so | wc -l
+    - echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
     - >
       if [ $(find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ -name intl.so | wc -l) -eq 0 ]; then
         # Install PHP "intl" extension for \Collator class usage
