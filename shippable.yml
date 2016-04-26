@@ -17,6 +17,8 @@ build:
     - php -v
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
+    - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+    - ls /home/shippable/cache
     # Debug before
     - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
     - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ -name intl.so | wc -l
