@@ -32,3 +32,4 @@ build:
     - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
     - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ -name intl.so | wc -l
     - echo "Hello World!!!"
+    - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
