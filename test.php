@@ -5,7 +5,7 @@
       $intl = new intl_test();
       $doc = $intl->main();
       echo $doc;
-      $this->assertEquals($doc,'1,234,567');
+      $this->assertEquals($doc,'1,234');
     }
   }
 ?>
