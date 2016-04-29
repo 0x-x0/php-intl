@@ -16,12 +16,13 @@ build:
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     - echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
-    - pickle install --ansi intl
+    - pickle install intl
     - echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
     - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage test.php
 
   
  on_success:
+    - echo "hello"
     - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php5.ini
   
  on_failure:
