@@ -15,22 +15,14 @@ build:
  ci:
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
-    - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-    # Debug before
-    - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
-    - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ -name intl.so | wc -l
     - echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
-    - >
-      if [ $(find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ -name intl.so | wc -l) -eq 0 ]; then
-        # Install PHP "intl" extension
-        pickle install --ansi intl
-        echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
-      fi;
-    # Debug after
-    - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
-    - find $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ -name intl.so | wc -l
+    - pickle install --ansi intl
+    - echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
     - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage test.php
 
   
  on_success:
     - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php5.ini
+  
+ on_failure:
+    - echo "Wow build failed"
