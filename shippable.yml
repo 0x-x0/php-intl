@@ -15,7 +15,7 @@ build:
  ci:
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
-    - echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
+    #- echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
     - pickle install intl
     - echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
     - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage test.php
