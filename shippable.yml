@@ -23,7 +23,7 @@ build:
   
  on_success:
     - echo "hello"
-    - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php5.ini
+    #- cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php5.ini
   
  on_failure:
     - echo "Wow build failed"
