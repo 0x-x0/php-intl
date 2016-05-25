@@ -2,13 +2,9 @@ build_image: drydock/u14phpallCustom
 
 language:php
 
-php:
-  - 5.6
+php:5.6
 
 # environment variable
-env:
- - FOO=bar
-
 build:
  cache: true
  cache_dir_list:
