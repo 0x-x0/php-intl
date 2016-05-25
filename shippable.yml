@@ -9,10 +9,6 @@ php:
 
 # environment variable
 build:
- cache: true
- cache_dir_list:
-    -  /root/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
-
  ci:
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
