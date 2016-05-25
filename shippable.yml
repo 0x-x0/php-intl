@@ -1,6 +1,6 @@
-build_image:drydock/u14phpallCustom
+build_image: drydock/u14phpallCustom
 
-language: php
+language:php
 
 php:
   - 5.6
