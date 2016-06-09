@@ -1,0 +1,7 @@
+jobs:
+  - name: job2
+    type: manifest
+    steps:
+      - GET resource5134
+      - PUT busybox
+      - PUT php-intl_master
