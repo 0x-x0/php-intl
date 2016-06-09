@@ -4,4 +4,4 @@ jobs:
     steps:
       - GET resource5134
       - PUT busybox
-      - PUT php-intl_master
+      #- PUT php-intl_master
