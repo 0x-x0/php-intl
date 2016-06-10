@@ -1,1 +1,8 @@
+jobs:
+  - name: intl-job
+    type: manifest
+    steps:
+      - GET busybox2
+      - PUT resource5134
+      - PUT busybox8
 
