@@ -1,5 +1,5 @@
 resources:
-  - name: job2
+  - name: resource2
     type: image
     integration: dockerhub
     source:
