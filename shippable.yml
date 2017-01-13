@@ -1,6 +1,3 @@
-build_image:
- - drydock/u14phpallCustom
-
 language:
  - php
 
